@@ -23,7 +23,6 @@ import { PeliculasService } from './providers/peliculas.service';
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
-
 @NgModule({
   declarations: [
     AppComponent,
