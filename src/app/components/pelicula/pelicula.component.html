@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container top20">
+  <div class="row text-justify">
+    <div class="col-md-3">
+      <img class="img-fluid img-thumbnail" [src]="pelicula | peliculaImagen">
+    </div>
+    <div class="col-md-9">
+      <h1>{{ pelicula.title }}</h1>
+      <p>{{ pelicula.overview }}</p>
+      <p>
+        <strong>Géneros:</strong> {{ pelicula.genres | listado }}</p>
+      <button type="button" class="btn btn-danger" (click)="regresar()">Regresar</button>
+    </div>
+  </div>
+</div>

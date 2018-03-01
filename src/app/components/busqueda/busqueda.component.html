@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container top20">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Búsqueda</label>
+    <input class="form-control" placeholder="Búsqueda" [(ngModel)]="texto" (keyup.enter)="buscar()"> 
+  </div>
+
+  <h1>Resultados para <small>{{ texto }}</small></h1><hr>
+
+  <div class="card-columns">
+    <div class="card" *ngFor="let peli of peliculas">
+      <img class="card-img-top img-fluid" [src]="peli | peliculaImagen" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">{{ peli.title }}</h4>
+        <p class="card-text">{{ peli.overview | max100}}</p>
+        <small class="text-muted">Fecha de estreno: {{ peli.release_date }}</small>
+      </div>
+      <div class="card-footer text-center puntero" (click)="verPelicula(peli.id, 'busqueda')">
+        Ver más ...
+      </div>
+    </div>
+  </div>
+</div>
