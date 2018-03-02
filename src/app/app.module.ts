@@ -17,6 +17,7 @@ import { ListadoPipe } from './pipes/listado.pipe';
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { Max100Pipe } from './pipes/max100.pipe';
 
+
 // Services
 import { PeliculasService } from './providers/peliculas.service';
 
